@@ -2,11 +2,13 @@
 
 namespace DelegateDemo
 {
+    //Declaration of Delegats
     public delegate void AddSumDelegate(int a, int b);
     public delegate void SubDelegate(int a, int b);
     public delegate void MulDelegate(int a, int b);
     class Program
     {
+        //Creating Methods to Refereance of Delegats
         public void AddSum(int a, int b)
         {
             int c = a + b;
@@ -24,7 +26,10 @@ namespace DelegateDemo
         }
         static void Main(string[] args)
         {
+            //Creating Object of Class
             Program p = new Program();
+
+            //Calling The Delegates  
             AddSumDelegate ad = new AddSumDelegate(p.AddSum);
             ad(50, 25);
             SubDelegate sd = new SubDelegate(p.SubNumber);
